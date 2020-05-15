@@ -76,19 +76,26 @@ function App() {
   return (
     <div className="App">
       <form autoComplete="off" className="form-edit" onSubmit={handleSubmit}>
-        <label>First name</label>
-        <input type="text" name="firstName" onChange={handleChange}
-               value={firstName} placeholder="Enter your name"/>
-        <div className="err">{errors.firstName}</div>
-        <label>Last name</label>
-        <input type="text" name="lastName" onChange={handleChange}
-               value={lastName} placeholder="Enter your last name"/>
-        <div className="err">{errors.lastName}</div>
+        <div className="form-field error">
+          <label>First name</label>
+          <input type="text" name="firstName" onChange={handleChange}
+                 value={firstName} placeholder="Enter your name"/>
+          <div className="error-message">{errors.firstName}</div>
+        </div>
 
-        <label htmlFor="age">Your age</label>
-        <input type="number" name="age" onChange={handleChange}
-               value={age} placeholder="Enter your age"/>
-        <div className="err">{errors.age}</div>
+        <div className="form-field error">
+          <label>Last name</label>
+          <input type="text" name="lastName" onChange={handleChange}
+                 value={lastName} placeholder="Enter your last name"/>
+          <div className="error-message">{errors.lastName}</div>
+        </div>
+
+        <div className="form-field error">
+          <label htmlFor="age">Your age</label>
+          <input type="number" name="age" onChange={handleChange}
+                 value={age} placeholder="Enter your age"/>
+          <div className="error-message">{errors.age}</div>
+        </div>
 
 
         <label htmlFor="position">Position</label>
@@ -98,17 +105,21 @@ function App() {
           <option>QA</option>
           <option>Project Manager</option>
         </select>
-        <div className="err">{errors.position}</div>
+        <div className="error-message">{errors.position}</div>
 
-        <label>Your location</label>
-        <input type="text" name="location" onChange={handleChange}
-               value={location}/>
-        <div className="err">{errors.location}</div>
+        <div className="form-field error">
+          <label>Your location</label>
+          <input type="text" name="location" onChange={handleChange}
+                 value={location}/>
+          <div className="error-message">{errors.location}</div>
+        </div>
 
-        <label htmlFor="bio">Bio</label>
-        <textarea id="bio" name="bio" onChange={handleChange}
-                  placeholder="Tell a little about yourself" value={bio}></textarea>
-        <div className="err">{errors.bio}</div>
+        <div className="form-field error">
+          <label htmlFor="bio">Bio</label>
+          <textarea id="bio" name="bio" onChange={handleChange}
+                    placeholder="Tell a little about yourself" value={bio}></textarea>
+          <div className="error-message">{errors.bio}</div>
+        </div>
         <label>
           <input type="checkbox" name="subscribe" onChange={handleChange}
                 checked={subscribe}/>

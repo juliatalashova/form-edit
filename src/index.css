@@ -18,6 +18,10 @@ code {
   margin: 0 auto;
   padding-top: 2rem;
 }
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
 input, button, select, textarea {
   font-family: "IBM Plex Sans", sans-serif, Arial, sans-serif;
   box-sizing: border-box;
@@ -30,14 +34,12 @@ input, button, select, textarea {
 }
 input, select, textarea {
   padding: .7rem;
-  margin-bottom: 1rem;
+  /*margin-bottom: 1rem;*/
 }
 label {
   margin-bottom: .5rem;
 }
-.err {
-  color: red;
-}
+
 .form-edit button {
   padding: 1rem;
   max-width: 40%;
@@ -45,6 +47,14 @@ label {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+}
+
+.error-message {
+  color: #cc0033;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 5px 0 0;
+  font-weight: bold;
 }
 select {
 	display: block;
